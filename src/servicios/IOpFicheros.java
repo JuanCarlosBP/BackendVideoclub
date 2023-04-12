@@ -10,6 +10,6 @@ public interface IOpFicheros {
     public void crear(String nombre) throws ExcepcionFichero;
     public void borrar(String nombre);
     public List<Pelicula> listar(String nombre) throws ExcepcionLeerFichero;
-    public void escribir(String nombre) throws ExcepcionEscribirFichero;
+    public void escribir(Pelicula pelicula, String nombre, boolean anexar) throws ExcepcionEscribirFichero;
     public String buscar(String nombre, String busca) throws ExcepcionLeerFichero;
 }
