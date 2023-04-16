@@ -1,4 +1,4 @@
-package servicios;
+package serviciodatos;
 
 import beanpelicula.Pelicula;
 import excepciones.*;

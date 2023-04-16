@@ -1,20 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package videoclub;
 
-/**
- *
- * @author carli
- */
+import beanpelicula.Pelicula;
+import serviciospeliculas.CatalogoImp;
+import serviciospeliculas.ICatalogo;
+
 public class Videoclub {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String nombre="hola";
+        ICatalogo cartelera=new CatalogoImp();
+        cartelera.iniciarCatalogo();
+        cartelera.agregarPelicula(nuevaPelicula(nombre)); 
+        cartelera.verPeliculas();
+        
+    }
+    
+
+    private static Pelicula nuevaPelicula(String nombre) {
+        Pelicula pelicula= new Pelicula(nombre);
+        return pelicula;
     }
     
 }
